@@ -1,0 +1,20 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.tabpfnv2_finetune.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-80GB"
+        ],
+        "n_parameters": 7243978,
+        "tuning_time": "0:03:11.651109",
+        "trial_id": 1,
+        "scores": {
+            "train": 0.8147116188353302,
+            "val": 0.8438177874186551,
+            "test": 0.7977736549165121
+        },
+        "time": "0:01:43.690653"
+    },
+    "n_completed_trials": 10,
+    "time": "0:22:03.591949"
+}

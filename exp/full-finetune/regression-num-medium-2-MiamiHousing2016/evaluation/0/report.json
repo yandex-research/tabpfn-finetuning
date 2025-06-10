@@ -1,0 +1,92 @@
+{
+    "function": "bin.tabpfnv2_finetune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 0,
+        "patience": 16,
+        "amp": true,
+        "n_epochs": -1,
+        "batch_size": 1,
+        "epoch_size": 10,
+        "seq_len_pred": 1024,
+        "finetune_mode": "full",
+        "model": {
+            "untie_pos_embeddings": false,
+            "untie_value_embeddings": false,
+            "tabpfn_config": {
+                "nhead": 6,
+                "emsize": 192,
+                "nlayers": 12,
+                "nhid_factor": 4
+            },
+            "num_embeddings": {
+                "type": "LinearEmbeddings"
+            }
+        },
+        "data": {
+            "seed": 0,
+            "num_policy": "noisy-quantile",
+            "cache": true,
+            "path": ":data/regression-num-medium-2-MiamiHousing2016",
+            "old": true
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 1.3912793292547576e-05,
+            "weight_decay": 0.0
+        }
+    },
+    "n_parameters": 11081288,
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.08974870028358278,
+            "mae": 0.057006459683179855,
+            "r2": 0.9752089977264404,
+            "score": -0.08974870028358278
+        },
+        "val": {
+            "rmse": 0.12709815471108368,
+            "mae": 0.08613353967666626,
+            "r2": 0.9481469988822937,
+            "score": -0.12709815471108368
+        },
+        "test": {
+            "rmse": 0.13344986232962713,
+            "mae": 0.09125703573226929,
+            "r2": 0.9441035389900208,
+            "score": -0.13344986232962713
+        }
+    },
+    "zero-shot-metrics": {
+        "val": {
+            "rmse": 0.13097306906446696,
+            "mae": 0.08875340968370438,
+            "r2": 0.9449370503425598,
+            "score": -0.13097306906446696
+        },
+        "test": {
+            "rmse": 0.13913090716380122,
+            "mae": 0.09538282454013824,
+            "r2": 0.9392431974411011,
+            "score": -0.13913090716380122
+        }
+    },
+    "train": {
+        "metrics": {
+            "val": {
+                "rmse": 0.1267333549333357,
+                "mae": 0.08573825657367706,
+                "r2": 0.9484442472457886,
+                "score": -0.1267333549333357
+            },
+            "train": {}
+        },
+        "best_step": 90
+    },
+    "time": "0:02:55.116241",
+    "chunk_size": null,
+    "eval_batch_size": 4096
+}

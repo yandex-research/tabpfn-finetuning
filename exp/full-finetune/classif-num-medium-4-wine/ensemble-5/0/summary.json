@@ -1,0 +1,10 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "scores": {
+        "val": 0.8217391304347826,
+        "test": 0.813780260707635
+    }
+}

@@ -1,0 +1,33 @@
+seed = 0
+patience = 16
+amp = true
+n_epochs = -1
+batch_size = 1
+epoch_size = 10
+seq_len_pred = 1024
+finetune_mode = "full"
+
+[model]
+untie_pos_embeddings = false
+untie_value_embeddings = false
+
+[model.tabpfn_config]
+nhead = 6
+emsize = 192
+nlayers = 12
+nhid_factor = 4
+
+[model.num_embeddings]
+type = "LinearEmbeddings"
+
+[data]
+seed = 0
+num_policy = "noisy-quantile"
+cache = true
+path = ":data/classif-num-medium-2-kdd_ipums_la_97-small"
+old = true
+
+[optimizer]
+type = "AdamW"
+lr = 3.871318040182814e-05
+weight_decay = 0.0

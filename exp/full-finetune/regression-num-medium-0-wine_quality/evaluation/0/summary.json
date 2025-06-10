@@ -1,0 +1,13 @@
+{
+    "function": "bin.tabpfnv2_finetune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "n_parameters": 11081288,
+    "scores": {
+        "train": -0.12114441104164983,
+        "val": -0.6350646737722896,
+        "test": -0.6214324939107577
+    },
+    "time": "0:01:09.700939"
+}

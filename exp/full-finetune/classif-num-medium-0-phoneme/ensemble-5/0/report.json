@@ -1,0 +1,82 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": ":data/classif-num-medium-0-phoneme"
+        }
+    },
+    "single_model_function": "bin.tabpfnv2_finetune.main",
+    "prediction_type": "probs",
+    "metrics": {
+        "val": {
+            "0": {
+                "precision": 0.9054054054054054,
+                "recall": 0.8933333333333333,
+                "f1-score": 0.8993288590604027,
+                "support": 150.0
+            },
+            "1": {
+                "precision": 0.8832116788321168,
+                "recall": 0.8962962962962963,
+                "f1-score": 0.8897058823529411,
+                "support": 135.0
+            },
+            "accuracy": 0.8947368421052632,
+            "macro avg": {
+                "precision": 0.8943085421187611,
+                "recall": 0.8948148148148147,
+                "f1-score": 0.8945173707066719,
+                "support": 285.0
+            },
+            "weighted avg": {
+                "precision": 0.8948925875549003,
+                "recall": 0.8947368421052632,
+                "f1-score": 0.8947706069358157,
+                "support": 285.0
+            },
+            "cross-entropy": 0.27581655792477316,
+            "roc-auc": 0.9534814814814816,
+            "score": 0.8947368421052632
+        },
+        "test": {
+            "0": {
+                "precision": 0.9226006191950464,
+                "recall": 0.8764705882352941,
+                "f1-score": 0.8989441930618401,
+                "support": 340.0
+            },
+            "1": {
+                "precision": 0.877906976744186,
+                "recall": 0.9235474006116208,
+                "f1-score": 0.9001490312965723,
+                "support": 327.0
+            },
+            "accuracy": 0.8995502248875562,
+            "macro avg": {
+                "precision": 0.9002537979696162,
+                "recall": 0.9000089944234575,
+                "f1-score": 0.8995466121792062,
+                "support": 667.0
+            },
+            "weighted avg": {
+                "precision": 0.9006893432108914,
+                "recall": 0.8995502248875562,
+                "f1-score": 0.8995348708770686,
+                "support": 667.0
+            },
+            "cross-entropy": 0.25529503032501094,
+            "roc-auc": 0.9601816873538407,
+            "score": 0.8995502248875562
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": ":data/regression-num-medium-0-wine_quality"
+        }
+    },
+    "single_model_function": "bin.tabpfnv2_finetune.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "val": {
+            "rmse": 0.6237842417780395,
+            "mae": 0.4114500880241394,
+            "r2": 0.5449691414833069,
+            "score": -0.6237842417780395
+        },
+        "test": {
+            "rmse": 0.6037482396686552,
+            "mae": 0.40061795711517334,
+            "r2": 0.517959713935852,
+            "score": -0.6037482396686552
+        }
+    }
+}

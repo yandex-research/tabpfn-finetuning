@@ -1,0 +1,34 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": ":data/regression-cat-medium-1-Brazilian_houses"
+        }
+    },
+    "single_model_function": "bin.tabpfnv2_finetune.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "val": {
+            "rmse": 0.05335086071439901,
+            "mae": 0.013155534863471985,
+            "r2": 0.9954051375389099,
+            "score": -0.05335086071439901
+        },
+        "test": {
+            "rmse": 0.042203761097211114,
+            "mae": 0.012509598396718502,
+            "r2": 0.9970978498458862,
+            "score": -0.042203761097211114
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": ":data/regression-num-medium-2-MiamiHousing2016"
+        }
+    },
+    "single_model_function": "bin.tabpfnv2_finetune.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "val": {
+            "rmse": 0.1260176525082934,
+            "mae": 0.08483269065618515,
+            "r2": 0.9490248560905457,
+            "score": -0.1260176525082934
+        },
+        "test": {
+            "rmse": 0.13303933687297717,
+            "mae": 0.09066746383905411,
+            "r2": 0.9444469213485718,
+            "score": -0.13303933687297717
+        }
+    }
+}

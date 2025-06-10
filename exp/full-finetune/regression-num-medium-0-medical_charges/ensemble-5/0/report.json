@@ -1,0 +1,34 @@
+{
+    "function": "bin.ensemble.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": ":data/regression-num-medium-0-medical_charges"
+        }
+    },
+    "single_model_function": "bin.tabpfnv2_finetune.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "val": {
+            "rmse": 0.08146947415421081,
+            "mae": 0.049876853823661804,
+            "r2": 0.9793293476104736,
+            "score": -0.08146947415421081
+        },
+        "test": {
+            "rmse": 0.08072203718769963,
+            "mae": 0.049519483000040054,
+            "r2": 0.9797555804252625,
+            "score": -0.08072203718769963
+        }
+    }
+}
