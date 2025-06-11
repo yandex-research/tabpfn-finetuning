@@ -1,6 +1,6 @@
 # On Finetuning Tabular Foundation Models
 
-:scroll: [arXiv](https://arxiv.org)
+:scroll: [arXiv](https://arxiv.org/abs/2506.08982)  
 &nbsp; :books: [Other tabular DL projects](https://github.com/yandex-research/rtdl)
 
 This repository provides tools for fine-tuning TabPFN v2 models on tabular datasets.
@@ -70,10 +70,10 @@ After training, results are saved in the same directory as the configuration fil
 
 If you find this work useful, please cite:
 ```bibtex
-@article{yourname2024finetuning,
+@article{rubachev2024onfinetuning,
   title={On Finetuning Tabular Foundation Models},
   author={Ivan Rubachev and Akim Kotelnikov and Nikolay Kartashev and Artem Babenko},
-  journal={arXiv preprint arXiv:2024.TODO},
+  journal={arXiv preprint arXiv:2024.08982},
   year={2024}
 }
 ```
