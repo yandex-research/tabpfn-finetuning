@@ -1,7 +1,6 @@
 # On Finetuning Tabular Foundation Models
 
-:scroll: [arXiv](https://arxiv.org/abs/2506.08982)  
-&nbsp; :books: [Other tabular DL projects](https://github.com/yandex-research/rtdl)
+:scroll: [arXiv](https://arxiv.org/abs/2506.08982) &nbsp; :books: [Other tabular DL projects](https://github.com/yandex-research/rtdl)
 
 This repository provides tools for fine-tuning TabPFN v2 models on tabular datasets.
 
